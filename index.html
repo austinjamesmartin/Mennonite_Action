@@ -16,7 +16,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         // Initialize the map
-        var map = L.map('map').setView([38.73614, -77.9391], 13);
+        var map = L.map('map').setView([38.73614, -77.9391], 9);
 
         // Add a tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -25,6 +25,26 @@
         // Add a marker
     var marker = L.marker([38.44947, -78.86848]).addTo(map);
     marker.bindPopup("Harrisonburg").openPopup();
+    var marker = L.marker([38.5909, -78.71756]).addTo(map);
+    marker.bindPopup("Day 2").openPopup();
+    var marker = L.marker([38.6443, -78.5475]).addTo(map);
+    marker.bindPopup("Day 3").openPopup();
+    var marker = L.marker([38.6563, -78.3411]).addTo(map);
+    marker.bindPopup("Day 4").openPopup();
+    var marker = L.marker([38.6941, -78.1701]).addTo(map);
+    marker.bindPopup("Day 5").openPopup();
+    var marker = L.marker([38.6742, -77.9997]).addTo(map);
+    marker.bindPopup("Day 6").openPopup();
+    var marker = L.marker([38.7192, -77.8045]).addTo(map);
+    marker.bindPopup("Day 7").openPopup();
+    var marker = L.marker([38.8353, -77.6779]).addTo(map);
+    marker.bindPopup("Day 8").openPopup();
+    var marker = L.marker([38.9155, -77.5565]).addTo(map);
+    marker.bindPopup("Day 9").openPopup();
+    var marker = L.marker([38.8743, -77.378]).addTo(map);
+    marker.bindPopup("Day 10").openPopup();
+    var marker = L.marker([38.8824, -77.1719]).addTo(map);
+    marker.bindPopup("Day 11").openPopup();
     var marker = L.marker([38.89766, -77.03543]).addTo(map);
     marker.bindPopup("Washington, D.C.").openPopup();
 
