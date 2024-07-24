@@ -27,7 +27,7 @@
         // Define a custom icon that is twice the size of the default icon
         var customIcon = L.icon({
             iconUrl: 'https://cdn-icons-png.flaticon.com/512/209/209158.png', // Flaticon dove icon
-            iconSize: [50, 82], // twice the size of the default icon
+            iconSize: [82, 82], // twice the size of the default icon
             iconAnchor: [25, 82], // point of the icon which will correspond to marker's location
             popupAnchor: [0, -82] // point from which the popup should open relative to the iconAnchor
         });
@@ -39,7 +39,7 @@
             { coords: [38.6443, -78.5475], popup: "Day 3" },
             { coords: [38.6563, -78.3411], popup: "Day 4" },
             { coords: [38.6941, -78.1701], popup: "Day 5" },
-            { coords: [38.6742, -77.9997], popup: "Day 6", icon: customIcon },
+            { coords: [38.6742, -77.9997], popup: "<b>Day 6</b><br>Current location", icon: customIcon },
             { coords: [38.7192, -77.8045], popup: "Day 7" },
             { coords: [38.8353, -77.6779], popup: "Day 8" },
             { coords: [38.9155, -77.5565], popup: "Day 9" },
@@ -54,7 +54,12 @@
             if (marker.icon) {
                 options.icon = marker.icon;
             }
-            L.marker(marker.coords, options).addTo(map).bindPopup(marker.popup);
+            var markerObj = L.marker(marker.coords, options).addTo(map).bindPopup(marker.popup);
+
+            // Open the popup for the "Day 6" marker automatically
+            if (marker.popup.includes("Day 6")) {
+                markerObj.openPopup();
+            }
         });
     </script>
 </body>
