@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +23,7 @@
 
         // Define a custom icon
         var customIcon = L.icon({
-        iconUrl: 'https://images.squarespace-cdn.com/content/v1/655641fb961d2535f2bc661e/e010312f-12fb-463e-8321-1b87fdfad806/mennonite+action+drafts-11.png', // Example URL, replace with your own icon URL
+            iconUrl: 'https://images.squarespace-cdn.com/content/v1/655641fb961d2535f2bc661e/e010312f-12fb-463e-8321-1b87fdfad806/mennonite+action+drafts-11.png',
             iconSize: [38, 38], // size of the icon
             iconAnchor: [19, 38], // point of the icon which will correspond to marker's location
             popupAnchor: [0, -38] // point from which the popup should open relative to the iconAnchor
@@ -52,7 +51,7 @@
             if (marker.icon) {
                 options.icon = marker.icon;
             }
-            L.marker(marker.coords).addTo(map).bindPopup(marker.popup).openPopup();
+            L.marker(marker.coords, options).addTo(map).bindPopup(marker.popup);
         });
     </script>
 </body>
