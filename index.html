@@ -1,9 +1,8 @@
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>All God's Children March for a Ceasfire</title>
+    <title>All God's Children March for a Ceasefire</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map {
@@ -23,7 +22,7 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Add a marker
+        // Add markers
         var markers = [
             { coords: [38.44947, -78.86848], popup: "Harrisonburg" },
             { coords: [38.5909, -78.71756], popup: "Day 2" },
@@ -42,7 +41,7 @@
         // Loop through markers and add them to the map
         markers.forEach(function(marker) {
             L.marker(marker.coords).addTo(map).bindPopup(marker.popup).openPopup();
-
+        });
     </script>
 </body>
 </html>
