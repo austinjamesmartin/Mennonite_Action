@@ -24,30 +24,24 @@
         }).addTo(map);
 
         // Add a marker
-    var marker = L.marker([38.44947, -78.86848]).addTo(map);
-    marker.bindPopup("Harrisonburg").openPopup();
-    var marker = L.marker([38.5909, -78.71756]).addTo(map);
-    marker.bindPopup("Day 2").openPopup();
-    var marker = L.marker([38.6443, -78.5475]).addTo(map);
-    marker.bindPopup("Day 3").openPopup();
-    var marker = L.marker([38.6563, -78.3411]).addTo(map);
-    marker.bindPopup("Day 4").openPopup();
-    var marker = L.marker([38.6941, -78.1701]).addTo(map);
-    marker.bindPopup("Day 5").openPopup();
-    var marker = L.marker([38.6742, -77.9997]).addTo(map);
-    marker.bindPopup("Day 6").openPopup();
-    var marker = L.marker([38.7192, -77.8045]).addTo(map);
-    marker.bindPopup("Day 7").openPopup();
-    var marker = L.marker([38.8353, -77.6779]).addTo(map);
-    marker.bindPopup("Day 8").openPopup();
-    var marker = L.marker([38.9155, -77.5565]).addTo(map);
-    marker.bindPopup("Day 9").openPopup();
-    var marker = L.marker([38.8743, -77.378]).addTo(map);
-    marker.bindPopup("Day 10").openPopup();
-    var marker = L.marker([38.8824, -77.1719]).addTo(map);
-    marker.bindPopup("Day 11").openPopup();
-    var marker = L.marker([38.89766, -77.03543]).addTo(map);
-    marker.bindPopup("Washington, D.C.").openPopup();
+        var markers = [
+            { coords: [38.44947, -78.86848], popup: "Harrisonburg" },
+            { coords: [38.5909, -78.71756], popup: "Day 2" },
+            { coords: [38.6443, -78.5475], popup: "Day 3" },
+            { coords: [38.6563, -78.3411], popup: "Day 4" },
+            { coords: [38.6941, -78.1701], popup: "Day 5" },
+            { coords: [38.6742, -77.9997], popup: "Day 6" },
+            { coords: [38.7192, -77.8045], popup: "Day 7" },
+            { coords: [38.8353, -77.6779], popup: "Day 8" },
+            { coords: [38.9155, -77.5565], popup: "Day 9" },
+            { coords: [38.8743, -77.378], popup: "Day 10" },
+            { coords: [38.8824, -77.1719], popup: "Day 11" },
+            { coords: [38.89766, -77.03543], popup: "Washington, D.C." }
+        ];
+
+        // Loop through markers and add them to the map
+        markers.forEach(function(marker) {
+            L.marker(marker.coords).addTo(map).bindPopup(marker.popup).openPopup();
 
     </script>
 </body>
