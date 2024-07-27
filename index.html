@@ -21,15 +21,12 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Define the default icon size
-        var defaultIconSize = [25, 41];
-
-        // Define a custom icon that is twice the size of the default icon
+        // Define a custom icon that is larger
         var customIcon = L.icon({
             iconUrl: 'https://cdn-icons-png.flaticon.com/512/209/209158.png', // Flaticon dove icon
-            iconSize: [50, 82], // twice the size of the default icon
-            iconAnchor: [25, 82], // point of the icon which will correspond to marker's location
-            popupAnchor: [0, -82] // point from which the popup should open relative to the iconAnchor
+            iconSize: [60, 98], // larger size of the icon
+            iconAnchor: [30, 98], // point of the icon which will correspond to marker's location
+            popupAnchor: [0, -98] // point from which the popup should open relative to the iconAnchor
         });
 
         // Add markers
@@ -44,7 +41,7 @@
             { coords: [38.8353, -77.6779], popup: "Day 8" },
             { coords: [38.9155, -77.5565], popup: "Day 9" },
             { coords: [38.8743, -77.378], popup: "Day 10" },
-            { coords: [38.8824, -77.1719], popup: "<b>Day 11</b><br>Current location</b><br>40 marchers", icon: customIcon },
+            { coords: [38.8824, -77.1719], popup: "<b>Day 11</b><br>Current location<br>40 marchers", icon: customIcon },
             { coords: [38.89766, -77.03543], popup: "Washington, D.C." }
         ];
 
@@ -56,8 +53,8 @@
             }
             var markerObj = L.marker(marker.coords, options).addTo(map).bindPopup(marker.popup);
 
-            // Open the popup for the "Day 10" marker automatically
-            if (marker.popup.includes("<b>Day 10</b><br>Current location</b><br>40 marchers")) {
+            // Open the popup for the "Day 11" marker automatically
+            if (marker.popup.includes("<b>Day 11</b><br>Current location<br>40 marchers")) {
                 markerObj.openPopup();
             }
         });
